@@ -242,3 +242,9 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+# Scheduler events
+scheduler_events = {
+    "daily": [
+        "cloud_management.cloud_management.scheduled_tasks.check_cloud_expirations"
+    ]
+}

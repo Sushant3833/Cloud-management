@@ -1,0 +1,160 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "CC-.####",
+ "creation": "2025-06-12 14:38:33.666992",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "client_information_section",
+  "client_name",
+  "client_contact",
+  "column_break_olsd",
+  "client_email",
+  "cloud_details_section",
+  "cloud_name",
+  "cloud_cost",
+  "paid_amount",
+  "column_break_evuy",
+  "start_date",
+  "expiry_date",
+  "renewal_date",
+  "days_remaining",
+  "status_section",
+  "status",
+  "column_break_obqt",
+  "notification_sent"
+ ],
+ "fields": [
+  {
+   "fieldname": "client_information_section",
+   "fieldtype": "Section Break",
+   "label": "Client Information"
+  },
+  {
+   "fieldname": "client_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Client Name",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "client_contact",
+   "fieldtype": "Link",
+   "label": "Client Contact",
+   "options": "Contact"
+  },
+  {
+   "fieldname": "column_break_olsd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "client_contact.email_id",
+   "fieldname": "client_email",
+   "fieldtype": "Data",
+   "label": "Client Email",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cloud_details_section",
+   "fieldtype": "Section Break",
+   "label": "Cloud Details"
+  },
+  {
+   "fieldname": "cloud_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Cloud Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cloud_cost",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Monthly Cloud Cost",
+   "reqd": 1
+  },
+  {
+   "fieldname": "paid_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Paid Amount"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_evuy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "expiry_date",
+   "fieldtype": "Date",
+   "label": "Expiry Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "renewal_date",
+   "fieldtype": "Date",
+   "label": "Renewal Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "days_remaining",
+   "fieldtype": "Int",
+   "label": "Days Remaining",
+   "read_only": 1
+  },
+  {
+   "fieldname": "status_section",
+   "fieldtype": "Section Break",
+   "label": "Status"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nPending\nExpired"
+  },
+  {
+   "fieldname": "column_break_obqt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "notification_sent",
+   "fieldtype": "Check",
+   "label": "Renewal Notification Sent"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-06-12 14:51:52.137007",
+ "modified_by": "Administrator",
+ "module": "cloud_management",
+ "name": "Cloud Client",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
